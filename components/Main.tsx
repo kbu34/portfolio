@@ -13,15 +13,15 @@ const Main = () => {
             Welcome to my website!
           </p>
           <h1 className="py-4 text-gray-700">
-            Hello, I'm <span className="text-[#602aaa]">Phillip</span>!
+            Hello, I&apos;m <span className="text-[#602aaa]">Phillip</span>!
           </h1>
           <h1 className="py-4 text-gray-700">
-            I'm also a full stack developer!
+            I&apos;m also a full stack developer!
           </h1>
           <p className="py-4 text-gray-600 max-w-[70%] m-auto">
-            I'm a full stack developer with experience with JavaScript
+            I&apos;m a full stack developer with experience with JavaScript
             frameworks such as Angular and Vue. I also have experience with C#
-            and .NET API development. As well as MySQL. At the moment, I'm
+            and .NET API development. As well as MySQL. At the moment, I&apos;m
             trying to branch out to other JavaScript frameworks such as Next.JS
             and container management using Kubernetes.
           </p>
