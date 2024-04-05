@@ -13,6 +13,40 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: any) => { 
+    e.preventDefault()
+    console.log('Sending')
+    let data = {
+      name,
+      phone,
+      email,
+      subject,
+      message
+    }
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      if (res.status === 200) {
+        console.log('Response succeeded!')
+        // setSubmitted(true)
+        setName('')
+        setPhone('')
+        setEmail('')
+        setSubject('')
+        setMessage('')
+      }
+    })
+  }
+
+
   return (
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
@@ -126,7 +160,7 @@ const Contact = () => {
                     }}
                   ></textarea>
                 </div>
-                <button className="w-full p-4 text-gray-100 mt-4">
+                <button className="w-full p-4 text-gray-100 mt-4" onClick={(e) => {handleSubmit(e)}}>
                   Send Message
                 </button>
               </form>
