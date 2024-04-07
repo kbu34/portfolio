@@ -9,24 +9,34 @@ export async function POST (req: Request) {
         html: `<div>${body.message}</div>`
        }
 
-    let nodemailer = require('nodemailer')
-    const transporter = nodemailer.createTransport({
-        port: 465,
-        host: "smtp.gmail.com",
-        auth: {
-          user: process.env.EMAIL_ADDRESS,
-          pass: process.env.EMAIL_PASSWORD,
-        },
-        secure: true,
-    })
+    const resp = await wrapedSendMail(mailData)
+    if (resp) {
+        return new Response("Message sent", {status: 200})
+    } else {
+        return new Response("Something went wrong", {status: 500})
+    }
+}
 
-    await transporter.sendMail(mailData, (err: any, info: any) => {
-        if (err != null) {
-            console.log("Error: " + err)
-            return new Response("Email Failed", {status: 500})
-        } else {
-            return new Response("Email sent successfully", {status: 200})
-        }
-    });
-    return new Response("Success", {status: 200})
+async function wrapedSendMail(maildata: any) {
+    return new Promise((resolve, reject) =>{
+        let nodemailer = require('nodemailer')
+        const transporter = nodemailer.createTransport({
+            port: 465,
+            host: "smtp.gmail.com",
+            auth: {
+              user: process.env.EMAIL_ADDRESS,
+              pass: process.env.EMAIL_PASSWORD,
+            },
+            secure: true,
+        })
+
+        transporter.sendMail(maildata, (err: any, info: any) => {
+            if (err != null) {
+                console.log("Error: " + err)
+                resolve(false)
+            } else {
+                resolve(true)
+            }
+        });
+    })
 }
