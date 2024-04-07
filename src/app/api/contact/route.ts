@@ -5,8 +5,8 @@ export async function POST (req: Request) {
         from: body.email,
         to: process.env.EMAIL_ADDRESS,
         subject: `Message From ${body.name}`,
-        text: body.message,
-        html: `<div>${body.message}</div>`
+        text: `From: ${body.email}\nPhone number: ${body.phone}\nSubject: ${body.subject}\nMessage: ${body.message}`,
+        html: `<h1>Subject: ${body.subject}</h1><h2>From: ${body.email}</h2><p>${body.message}</p><label>Phone Number: ${body.phone}</label>`
        }
 
     const resp = await wrapedSendMail(mailData)
