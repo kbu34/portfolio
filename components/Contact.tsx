@@ -15,47 +15,49 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const [errors, setErrors] = useState({});
-  const [isFormValid, setIsFormValid] = useState(false); 
+  const [errors, setErrors] = useState<{name: null | string, email: null | string, subject: null | string, message: null | string}>({name: null, email: null, subject: null, message: null});
+  const [isFormValid, setIsFormValid] = useState(false);
 
   useEffect(() => { 
     validateForm(); 
   }, [name, email, subject, message]); 
 
   const validateForm = () => { 
-    let errors = {}; 
+    let errors: {name: null | string, email: null | string, subject: null | string, message: null | string} = {name: null, email: null, subject: null, message: null}; 
+    let error_num = 0;
 
     if (!name) { 
-      errors.name = 'Name is required.'; 
+      errors.name = 'Name is required.';
+      error_num += 1;
     } else if (name.length > 35) {
       errors.name = 'Name is too long!'
+      error_num += 1;
     }
 
     if (!email) { 
       errors.email = 'Email is required.'; 
+      error_num += 1;
     } else if (!/\S+@\S+\.\S+/.test(email)) { 
       errors.email = 'Email is invalid.'; 
+      error_num += 1;
     }
 
     if (!subject) {
       errors.subject = 'Subject is required.';
+      error_num += 1;
     } else if (subject.length > 40) {
       errors.subject = 'Subject is a bit too long...'
+      error_num += 1;
     }
 
     if (!message) {
       errors.message = 'The message is empty!'
+      error_num += 1;
     }
 
     setErrors(errors); 
-    setIsFormValid(Object.keys(errors).length === 0); 
+    setIsFormValid(error_num === 0); 
   }; 
-
-  const showToastMessage = () => {
-    toast.success("Success Notification !", {
-      position: toast.POSITION.TOP_RIGHT,
-    });
-  }
 
   const handleSubmit = (e: any) => { 
     e.preventDefault()
@@ -84,6 +86,10 @@ const Contact = () => {
         toast.success("Message sent successfully! Thank you!", {
           position: "bottom-right"
         });
+      } else {
+        toast.error("Something went wrong! Try again later.", {
+          position: "bottom-right"
+        })
       }
     })
   }
