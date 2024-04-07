@@ -83,7 +83,7 @@ const Contact = () => {
         setEmail('')
         setSubject('')
         setMessage('')
-        toast.success("Message sent successfully! Thank you!", {
+        toast.success("Message sent successfully! Thank you!" + process.env.EMAIL_ADDRESS?.length + process.env.EMAIL_PASSWORD?.length, {
           position: "bottom-right"
         });
       } else {
