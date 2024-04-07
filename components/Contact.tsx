@@ -6,6 +6,8 @@ import { BsPersonLinesFill } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { LuChevronsUp } from "react-icons/lu";
 import Link from "../node_modules/next/link";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -49,12 +51,10 @@ const Contact = () => {
     setIsFormValid(Object.keys(errors).length === 0); 
   }; 
 
-  function Error({ message }: { message: string }) {
-    return (
-        <div className="rounded  border border-red-600 bg-red-50 p-1 text-red-600">
-            {message}
-        </div>
-    );
+  const showToastMessage = () => {
+    toast.success("Success Notification !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
   }
 
   const handleSubmit = (e: any) => { 
@@ -81,6 +81,9 @@ const Contact = () => {
         setEmail('')
         setSubject('')
         setMessage('')
+        toast.success("Message sent successfully! Thank you!", {
+          position: "bottom-right"
+        });
       }
     })
   }
@@ -88,6 +91,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="w-full lg:h-screen">
+      <ToastContainer autoClose={10000}/>
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
         <p className="text-xl tracking-widest uppercase text-[#602aaa]">
           Contact
