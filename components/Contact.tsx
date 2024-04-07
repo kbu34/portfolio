@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsPersonLinesFill } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
@@ -13,10 +13,52 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState({});
+  const [isFormValid, setIsFormValid] = useState(false); 
+
+  useEffect(() => { 
+    validateForm(); 
+  }, [name, email, subject, message]); 
+
+  const validateForm = () => { 
+    let errors = {}; 
+
+    if (!name) { 
+      errors.name = 'Name is required.'; 
+    } else if (name.length > 35) {
+      errors.name = 'Name is too long!'
+    }
+
+    if (!email) { 
+      errors.email = 'Email is required.'; 
+    } else if (!/\S+@\S+\.\S+/.test(email)) { 
+      errors.email = 'Email is invalid.'; 
+    }
+
+    if (!subject) {
+      errors.subject = 'Subject is required.';
+    } else if (subject.length > 40) {
+      errors.subject = 'Subject is a bit too long...'
+    }
+
+    if (!message) {
+      errors.message = 'The message is empty!'
+    }
+
+    setErrors(errors); 
+    setIsFormValid(Object.keys(errors).length === 0); 
+  }; 
+
+  function Error({ message }: { message: string }) {
+    return (
+        <div className="rounded  border border-red-600 bg-red-50 p-1 text-red-600">
+            {message}
+        </div>
+    );
+  }
 
   const handleSubmit = (e: any) => { 
     e.preventDefault()
-    console.log('Sending')
     let data = {
       name,
       phone,
@@ -33,10 +75,7 @@ const Contact = () => {
       },
       body: JSON.stringify(data)
     }).then((res) => {
-      console.log('Response received')
       if (res.status === 200) {
-        console.log('Response succeeded!')
-        // setSubmitted(true)
         setName('')
         setPhone('')
         setEmail('')
@@ -105,13 +144,15 @@ const Contact = () => {
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2">Name</label>
                     <input
-                      className="border-2 rounded-lg p-3 flex border-gray-300"
+                      className={errors.name ? "border-2 rounded-lg p-3 flex border-red-200" : "border-2 rounded-lg p-3 flex border-gray-300"}
                       type="text"
+                      placeholder="Name"
                       value={name}
                       onChange={(e) => {
                         setName(e.target.value);
                       }}
                     />
+                    {errors.name && <p className="text-sm py-2 text-red-500">{errors.name}</p>}
                   </div>
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2">
@@ -120,6 +161,7 @@ const Contact = () => {
                     <input
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
+                      placeholder="Phone Number"
                       value={phone}
                       onChange={(e) => {
                         setPhone(e.target.value);
@@ -130,37 +172,46 @@ const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2">Email</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
-                    type="email"
+                    className={errors.email ? "border-2 rounded-lg p-3 flex border-red-200" : "border-2 rounded-lg p-3 flex border-gray-300"}
+                    placeholder="Email Address"
                     value={email}
                     onChange={(e) => {
                       setEmail(e.target.value);
                     }}
                   />
+                  {errors.email && <p className="text-sm py-2 text-red-500">{errors.email}</p>}
                 </div>
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2">Subject</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    className={errors.subject ? "border-2 rounded-lg p-3 flex border-red-200" : "border-2 rounded-lg p-3 flex border-gray-300"}
                     type="text"
+                    placeholder="Subject of Matter"
                     value={subject}
                     onChange={(e) => {
                       setSubject(e.target.value);
                     }}
                   />
+                  {errors.subject && <p className="text-sm py-2 text-red-500">{errors.subject}</p>}
                 </div>
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2">Message</label>
                   <textarea
-                    className="border-2 rounded-lg p-3  border-gray-300"
+                    className={errors.message ? "border-2 rounded-lg p-3  border-red-200" : "border-2 rounded-lg p-3  border-gray-300"}
                     rows={10}
+                    placeholder="Your message goes here..."
                     value={message}
                     onChange={(e) => {
                       setMessage(e.target.value);
                     }}
                   ></textarea>
+                  {errors.message && <p className="text-sm py-2 text-red-500">{errors.message}</p>}
                 </div>
-                <button className="w-full p-4 text-gray-100 mt-4" onClick={(e) => {handleSubmit(e)}}>
+                <button 
+                  className={isFormValid ? "w-full p-4 text-gray-100 mt-4": "w-full p-4 text-gray-600 mt-4 from-[#a7a5d4] to-[#a6bff7]"}
+                  disabled={!isFormValid}
+                  onClick={(e) => {handleSubmit(e)}}
+                  >
                   Send Message
                 </button>
               </form>
