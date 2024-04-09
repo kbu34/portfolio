@@ -17,6 +17,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState<{name: null | string, email: null | string, subject: null | string, message: null | string}>({name: null, email: null, subject: null, message: null});
   const [isFormValid, setIsFormValid] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => { 
     validateForm(); 
@@ -59,7 +60,8 @@ const Contact = () => {
     setIsFormValid(error_num === 0); 
   }; 
 
-  const handleSubmit = (e: any) => { 
+  const handleSubmit = (e: any) => {
+    setIsSubmitting(true)
     e.preventDefault()
     let data = {
       name,
@@ -78,6 +80,7 @@ const Contact = () => {
       body: JSON.stringify(data)
     }).then((res) => {
       if (res.status === 200) {
+        setIsSubmitting(false)
         setName('')
         setPhone('')
         setEmail('')
@@ -87,6 +90,7 @@ const Contact = () => {
           position: "bottom-right"
         });
       } else {
+        setIsSubmitting(false);
         toast.error("Something went wrong! Try again later.", {
           position: "bottom-right"
         })
@@ -218,8 +222,8 @@ const Contact = () => {
                   {errors.message && <p className="text-sm py-2 text-red-500">{errors.message}</p>}
                 </div>
                 <button 
-                  className={isFormValid ? "w-full p-4 text-gray-100 mt-4": "w-full p-4 text-gray-600 mt-4 from-[#a7a5d4] to-[#a6bff7]"}
-                  disabled={!isFormValid}
+                  className={(isFormValid && !isSubmitting) ? "w-full p-4 text-gray-100 mt-4": "w-full p-4 text-gray-600 mt-4 from-[#a7a5d4] to-[#a6bff7]"}
+                  disabled={!isFormValid || isSubmitting}
                   onClick={(e) => {handleSubmit(e)}}
                   >
                   Send Message
