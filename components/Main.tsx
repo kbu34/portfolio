@@ -26,26 +26,26 @@ const Main = () => {
             and container management using Kubernetes.
           </p>
           <div className="flex  items-center justify-between  max-w-[330px] m-auto py-4">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <Link href={"https://www.linkedin.com/in/phillip-kim-1001731bb/"}>
+            <Link href={"https://www.linkedin.com/in/phillip-kim-1001731bb/"}>
+              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                 <FaLinkedinIn />
-              </Link>
-            </div>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <Link href={"https://github.com/kbu34/"}>
+              </div>
+            </Link>
+            <Link href={"https://github.com/kbu34/"}>
+              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                 <FaGithub />
-              </Link>
-            </div>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <Link href={"mailto:phillipkim156@gmail.com"}>
+              </div>
+            </Link>
+            <Link href={"mailto:phillipkim156@gmail.com"}>
+              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                 <AiOutlineMail />
-              </Link>
-            </div>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <Link href={"/#about"}>
+              </div>
+            </Link>
+            <Link href={"/#about"}>
+              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                 <BsPersonLinesFill />
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

@@ -15,93 +15,102 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const [errors, setErrors] = useState<{name: null | string, email: null | string, subject: null | string, message: null | string}>({name: null, email: null, subject: null, message: null});
+  const [errors, setErrors] = useState<{
+    name: null | string;
+    email: null | string;
+    subject: null | string;
+    message: null | string;
+  }>({ name: null, email: null, subject: null, message: null });
   const [isFormValid, setIsFormValid] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  useEffect(() => { 
-    validateForm(); 
-  }, [name, email, subject, message]); 
+  useEffect(() => {
+    validateForm();
+  }, [name, email, subject, message]);
 
-  const validateForm = () => { 
-    let errors: {name: null | string, email: null | string, subject: null | string, message: null | string} = {name: null, email: null, subject: null, message: null}; 
+  const validateForm = () => {
+    let errors: {
+      name: null | string;
+      email: null | string;
+      subject: null | string;
+      message: null | string;
+    } = { name: null, email: null, subject: null, message: null };
     let error_num = 0;
 
-    if (!name) { 
-      errors.name = 'Name is required.';
+    if (!name) {
+      errors.name = "Name is required.";
       error_num += 1;
     } else if (name.length > 35) {
-      errors.name = 'Name is too long!'
+      errors.name = "Name is too long!";
       error_num += 1;
     }
 
-    if (!email) { 
-      errors.email = 'Email is required.'; 
+    if (!email) {
+      errors.email = "Email is required.";
       error_num += 1;
-    } else if (!/\S+@\S+\.\S+/.test(email)) { 
-      errors.email = 'Email is invalid.'; 
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      errors.email = "Email is invalid.";
       error_num += 1;
     }
 
     if (!subject) {
-      errors.subject = 'Subject is required.';
+      errors.subject = "Subject is required.";
       error_num += 1;
     } else if (subject.length > 40) {
-      errors.subject = 'Subject is a bit too long...'
+      errors.subject = "Subject is a bit too long...";
       error_num += 1;
     }
 
     if (!message) {
-      errors.message = 'The message is empty!'
+      errors.message = "The message is empty!";
       error_num += 1;
     }
 
-    setErrors(errors); 
-    setIsFormValid(error_num === 0); 
-  }; 
+    setErrors(errors);
+    setIsFormValid(error_num === 0);
+  };
 
   const handleSubmit = (e: any) => {
-    setIsSubmitting(true)
-    e.preventDefault()
+    setIsSubmitting(true);
+    e.preventDefault();
     let data = {
       name,
       phone,
       email,
       subject,
-      message
-    }
+      message,
+    };
 
-    fetch('/api/contact', {
-      method: 'POST',
+    fetch("/api/contact", {
+      method: "POST",
       headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     }).then((res) => {
       if (res.status === 200) {
-        setIsSubmitting(false)
-        setName('')
-        setPhone('')
-        setEmail('')
-        setSubject('')
-        setMessage('')
+        setIsSubmitting(false);
+        setName("");
+        setPhone("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
         toast.success("Message sent successfully! Thank you!", {
-          position: "bottom-right"
+          position: "bottom-right",
         });
       } else {
         setIsSubmitting(false);
         toast.error("Something went wrong! Try again later.", {
-          position: "bottom-right"
-        })
+          position: "bottom-right",
+        });
       }
-    })
-  }
-
+    });
+  };
 
   return (
     <div id="contact" className="w-full lg:h-screen">
-      <ToastContainer autoClose={10000}/>
+      <ToastContainer autoClose={10000} />
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
         <p className="text-xl tracking-widest uppercase text-[#602aaa]">
           Contact
@@ -129,24 +138,28 @@ const Contact = () => {
               <div>
                 <p className="uppercase pt-8">Connect with me</p>
                 <div className="flex items-center justify-between py-4">
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <Link href={"https://www.linkedin.com/in/phillip-kim-1001731bb/"}>
+                  <Link
+                    href={"https://www.linkedin.com/in/phillip-kim-1001731bb/"}
+                  >
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaLinkedinIn />
-                    </Link>
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    </div>
+                  </Link>
                   <Link href={"https://github.com/kbu34/"}>
-                    <FaGithub />
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <FaGithub />
+                    </div>
                   </Link>
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <Link href={"mailto:phillipkim156@gmail.com"}>
-                    <AiOutlineMail />
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <AiOutlineMail />
+                    </div>
                   </Link>
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <BsPersonLinesFill />
-                  </div>
+                  <Link href={"/#about"}>
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <BsPersonLinesFill />
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -158,7 +171,11 @@ const Contact = () => {
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2">Name</label>
                     <input
-                      className={errors.name ? "border-2 rounded-lg p-3 flex border-red-200" : "border-2 rounded-lg p-3 flex border-gray-300"}
+                      className={
+                        errors.name
+                          ? "border-2 rounded-lg p-3 flex border-red-200"
+                          : "border-2 rounded-lg p-3 flex border-gray-300"
+                      }
                       type="text"
                       placeholder="Name"
                       value={name}
@@ -166,7 +183,9 @@ const Contact = () => {
                         setName(e.target.value);
                       }}
                     />
-                    {errors.name && <p className="text-sm py-2 text-red-500">{errors.name}</p>}
+                    {errors.name && (
+                      <p className="text-sm py-2 text-red-500">{errors.name}</p>
+                    )}
                   </div>
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2">
@@ -186,19 +205,29 @@ const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2">Email</label>
                   <input
-                    className={errors.email ? "border-2 rounded-lg p-3 flex border-red-200" : "border-2 rounded-lg p-3 flex border-gray-300"}
+                    className={
+                      errors.email
+                        ? "border-2 rounded-lg p-3 flex border-red-200"
+                        : "border-2 rounded-lg p-3 flex border-gray-300"
+                    }
                     placeholder="Email Address"
                     value={email}
                     onChange={(e) => {
                       setEmail(e.target.value);
                     }}
                   />
-                  {errors.email && <p className="text-sm py-2 text-red-500">{errors.email}</p>}
+                  {errors.email && (
+                    <p className="text-sm py-2 text-red-500">{errors.email}</p>
+                  )}
                 </div>
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2">Subject</label>
                   <input
-                    className={errors.subject ? "border-2 rounded-lg p-3 flex border-red-200" : "border-2 rounded-lg p-3 flex border-gray-300"}
+                    className={
+                      errors.subject
+                        ? "border-2 rounded-lg p-3 flex border-red-200"
+                        : "border-2 rounded-lg p-3 flex border-gray-300"
+                    }
                     type="text"
                     placeholder="Subject of Matter"
                     value={subject}
@@ -206,12 +235,20 @@ const Contact = () => {
                       setSubject(e.target.value);
                     }}
                   />
-                  {errors.subject && <p className="text-sm py-2 text-red-500">{errors.subject}</p>}
+                  {errors.subject && (
+                    <p className="text-sm py-2 text-red-500">
+                      {errors.subject}
+                    </p>
+                  )}
                 </div>
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2">Message</label>
                   <textarea
-                    className={errors.message ? "border-2 rounded-lg p-3  border-red-200" : "border-2 rounded-lg p-3  border-gray-300"}
+                    className={
+                      errors.message
+                        ? "border-2 rounded-lg p-3  border-red-200"
+                        : "border-2 rounded-lg p-3  border-gray-300"
+                    }
                     rows={10}
                     placeholder="Your message goes here..."
                     value={message}
@@ -219,13 +256,23 @@ const Contact = () => {
                       setMessage(e.target.value);
                     }}
                   ></textarea>
-                  {errors.message && <p className="text-sm py-2 text-red-500">{errors.message}</p>}
+                  {errors.message && (
+                    <p className="text-sm py-2 text-red-500">
+                      {errors.message}
+                    </p>
+                  )}
                 </div>
-                <button 
-                  className={(isFormValid && !isSubmitting) ? "w-full p-4 text-gray-100 mt-4": "w-full p-4 text-gray-600 mt-4 from-[#a7a5d4] to-[#a6bff7]"}
+                <button
+                  className={
+                    isFormValid && !isSubmitting
+                      ? "w-full p-4 text-gray-100 mt-4"
+                      : "w-full p-4 text-gray-600 mt-4 from-[#a7a5d4] to-[#a6bff7]"
+                  }
                   disabled={!isFormValid || isSubmitting}
-                  onClick={(e) => {handleSubmit(e)}}
-                  >
+                  onClick={(e) => {
+                    handleSubmit(e);
+                  }}
+                >
                   Send Message
                 </button>
               </form>
