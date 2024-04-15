@@ -46,8 +46,8 @@ function Skills() {
                 <Image
                   src={"/assets/typescript.png"}
                   alt="/"
-                  width="64"
-                  height="64"
+                  width="75"
+                  height="75"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -89,10 +89,25 @@ function Skills() {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
+                  src={"/assets/nextjs.png"}
+                  alt="/"
+                  width="140"
+                  height="64"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3>Next.js</h3>
+              </div>
+            </div>
+          </div>
+          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+              <div className="m-auto">
+                <Image
                   src={"/assets/React.png"}
                   alt="/"
-                  width="64"
-                  height="64"
+                  width="75"
+                  height="75"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -136,8 +151,8 @@ function Skills() {
                 <Image
                   src={"/assets/golang.png"}
                   alt="/"
-                  width="64"
-                  height="64"
+                  width="80"
+                  height="80"
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
