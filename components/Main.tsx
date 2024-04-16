@@ -16,14 +16,16 @@ const Main = () => {
             Hello, I&apos;m <span className="text-[#602aaa]">Phillip</span>!
           </h1>
           <h1 className="py-4 text-gray-700">
-            I&apos;m also a full stack developer!
+            I&apos;m a full stack software engineer!
           </h1>
           <p className="py-4 text-gray-600 max-w-[70%] m-auto">
-            I&apos;m a full stack developer with experience with JavaScript
-            frameworks such as Angular and Vue. I also have experience with C#
-            and .NET API development. As well as MySQL. At the moment, I&apos;m
-            trying to branch out to other JavaScript frameworks such as Next.JS
-            and container management using Kubernetes.
+            I&apos;m a full stack developer currently living in Christchurch,
+            New Zealand. Since the day I first jumped into programming, my
+            passion for software development hasn't changed. I love all aspects
+            of computers and software engineering. Whether it's embedded system
+            or cloud computing. I&apos;ve had the privilege of working with some
+            amazing people in the tech industry so far and would love to do it
+            again.
           </p>
           <div className="flex  items-center justify-between  max-w-[330px] m-auto py-4">
             <Link href={"https://www.linkedin.com/in/phillip-kim-1001731bb/"}>

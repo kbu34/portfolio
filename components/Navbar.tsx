@@ -37,7 +37,7 @@ const Navbar = () => {
         {/* <Image src='/../public/assets/transparent.png' alt='/' width='125' height='50'/> */}
         <div>
           <ul className="hidden md:flex">
-            <Link href="/">
+            <Link href="/#home">
               <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
             </Link>
             <Link href="/#about">
@@ -88,7 +88,7 @@ const Navbar = () => {
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
-              <Link href="/">
+              <Link href="/home">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Home
                 </li>
@@ -119,28 +119,28 @@ const Navbar = () => {
                 Connect
               </p>
               <div className="flex item-center justify-between my-4 w-full sm:w-[80%]">
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Link
-                    href={"https://www.linkedin.com/in/phillip-kim-1001731bb/"}
-                  >
+                <Link
+                  href={"https://www.linkedin.com/in/phillip-kim-1001731bb/"}
+                >
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                     <FaLinkedinIn />
-                  </Link>
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Link href={"https://github.com/kbu34/"}>
+                  </div>
+                </Link>
+                <Link href={"https://github.com/kbu34/"}>
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                     <FaGithub />
-                  </Link>
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Link href={"mailto:phillipkim156@gmail.com"}>
+                  </div>
+                </Link>
+                <Link href={"mailto:phillipkim156@gmail.com"}>
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                     <AiOutlineMail />
-                  </Link>
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Link href={"/#about"}>
+                  </div>
+                </Link>
+                <Link href={"/#about"}>
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                     <BsPersonLinesFill />
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

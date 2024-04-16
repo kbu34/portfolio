@@ -130,8 +130,8 @@ const Contact = () => {
                 <h2 className="py-2">Phillip Kim</h2>
                 <p>Full-Stack Developer</p>
                 <p className="py-4">
-                  I&apos;m happy to talk about full time positions. Please
-                  contact me. I&apos;m also happy to provide my full CV if
+                  Let's work together! I&apos;m happy to talk about full time
+                  positions. I&apos;m also happy to provide my full CV if
                   needed.
                 </p>
               </div>
@@ -280,7 +280,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex justify-center py-12">
-          <Link href="/">
+          <Link href="/#home">
             <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
               <LuChevronsUp className="text-[#602aaa]" size={30} />
             </div>
