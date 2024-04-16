@@ -130,7 +130,7 @@ const Contact = () => {
                 <h2 className="py-2">Phillip Kim</h2>
                 <p>Full-Stack Developer</p>
                 <p className="py-4">
-                  Let's work together! I&apos;m happy to talk about full time
+                  Let&apos;s work together! I&apos;m happy to talk about full time
                   positions. I&apos;m also happy to provide my full CV if
                   needed.
                 </p>

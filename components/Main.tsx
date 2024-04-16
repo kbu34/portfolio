@@ -21,8 +21,8 @@ const Main = () => {
           <p className="py-4 text-gray-600 max-w-[70%] m-auto">
             I&apos;m a full stack developer currently living in Christchurch,
             New Zealand. Since the day I first jumped into programming, my
-            passion for software development hasn't changed. I love all aspects
-            of computers and software engineering. Whether it's embedded system
+            passion for software development hasn&apos;t changed. I love all aspects
+            of computers and software engineering. Whether it&apos;s embedded system
             or cloud computing. I&apos;ve had the privilege of working with some
             amazing people in the tech industry so far and would love to do it
             again.
