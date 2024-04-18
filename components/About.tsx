@@ -46,8 +46,8 @@ const About = () => {
           </p>
           <p className="py-2 text-gray-600">
             When I&apos;m not working, I like going on walks and tramping. I
-            also save the world from bad guys if I feel like it. Or
-            synthesise new items in my atelier using alchemy.
+            also save the world from bad guys if I feel like it. Or synthesise
+            new items in my atelier using alchemy.
           </p>
           <p className="py-2 text-gray-600 italic">More to come...</p>
         </div>

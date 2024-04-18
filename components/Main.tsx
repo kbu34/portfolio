@@ -21,11 +21,11 @@ const Main = () => {
           <p className="py-4 text-gray-600 max-w-[70%] m-auto">
             I&apos;m a full stack developer currently living in Christchurch,
             New Zealand. Since the day I first jumped into programming, my
-            passion for software development hasn&apos;t changed. I love all aspects
-            of computers and software engineering. Whether it&apos;s embedded system
-            or cloud computing. I&apos;ve had the privilege of working with some
-            amazing people in the tech industry so far and would love to do it
-            again.
+            passion for software development hasn&apos;t changed. I love all
+            aspects of computers and software engineering. Whether it&apos;s
+            embedded system or cloud computing. I&apos;ve had the privilege of
+            working with some amazing people in the tech industry so far and
+            would love to do it again.
           </p>
           <div className="flex  items-center justify-between  max-w-[330px] m-auto py-4">
             <Link href={"https://www.linkedin.com/in/phillip-kim-1001731bb/"}>
