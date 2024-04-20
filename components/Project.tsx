@@ -21,13 +21,13 @@ const Project = ({ title, description, tags, imageUrl }: ProjectProps) => {
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      className="mb-3 sm:mb-8 last:mb-0 group"
+      className="mb-5 sm:mb-8 last:mb-0 group"
     >
       <section
         ref={ref}
-        className="shadow-lg shadow-gray-400 max-w-[45rem] border border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition group-even:pl-8 rounded-lg"
+        className="shadow-lg shadow-gray-400 max-w-[26rem] sm:max-w-[45rem] border border-black/5 overflow-hidden sm:pr-8 sm:h-[20rem] max-h-[30rem] relative hover:bg-gray-200 transition sm:group-even:pl-8 rounded-lg"
       >
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pt-5 flex flex-col h-full group-even:ml-[18rem] group-odd:mr-[19rem]">
+        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pt-5 flex flex-col h-full sm:group-even:ml-[18rem] sm:group-odd:mr-[19rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className="mt-2 leading-relaxed text-gray-700">{description}</p>
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
@@ -43,7 +43,7 @@ const Project = ({ title, description, tags, imageUrl }: ProjectProps) => {
         </div>
 
         <Image
-          className="absolute top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl group-even:right-[initial] group-even:-left-40 group-hover:-translate-x-3 group-hover:-translate-y-3 group-hover:-rotate-2 group-hover:scale-[1.04] group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 transition"
+          className="sm:absolute top-30 sm:top-8 sm:-right-40 sm:w-[28.25rem] rounded-t-lg shadow-2xl sm:group-even:right-[initial] sm:group-even:-left-40 group-hover:-translate-x-3 group-hover:-translate-y-3 group-hover:-rotate-2 group-hover:scale-[1.04] sm:group-even:group-hover:translate-x-3 sm:group-even:group-hover:translate-y-3 sm:group-even:group-hover:rotate-2 transition"
           src={imageUrl}
           alt="Project I worked on."
           quality={95}
