@@ -51,7 +51,7 @@ const About = () => {
           </p>
           <p className="py-2 italic text-gray-600">More to come...</p>
         </div>
-        <div className="m-auto flex h-auto w-full items-center justify-center rounded-xl p-4 shadow-xl shadow-gray-400 duration-300 ease-in hover:scale-105">
+        <div className="m-auto flex h-auto w-full items-center justify-center rounded-xl p-4 shadow-xl shadow-gray-400 duration-300 ease-in sm:hover:scale-105">
           <img
             className="rounded-xl"
             src="https://picjumbo.com/wp-content/uploads/new-macbook-pro-with-iphone-1080x1620.jpg"
