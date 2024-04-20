@@ -25,9 +25,9 @@ const Project = ({ title, description, tags, imageUrl }: ProjectProps) => {
     >
       <section
         ref={ref}
-        className="relative max-h-[27rem] max-w-[26rem] overflow-hidden rounded-lg border border-black/5 shadow-lg shadow-gray-400 transition hover:bg-gray-200 sm:h-[20rem] sm:max-w-[45rem] sm:pr-8 sm:group-even:pl-8"
+        className="relative max-h-[22rem] max-w-[26rem] overflow-hidden rounded-lg border border-black/5 shadow-lg shadow-gray-400 transition hover:bg-gray-200 sm:h-[20rem] sm:max-w-[45rem] sm:pr-8 sm:group-even:pl-8"
       >
-        <div className="flex h-full flex-col px-5 pb-7 pt-4 sm:pl-10 sm:pt-5 sm:group-odd:mr-[19rem] sm:group-even:ml-[18rem]">
+        <div className="flex h-full flex-col px-5 pb-3 sm:pb-7 sm:pl-10 sm:pt-5 sm:group-odd:mr-[19rem] sm:group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className="mt-2 leading-relaxed text-gray-700">{description}</p>
           <ul className="mt-4 flex flex-wrap gap-2 sm:mt-auto">

@@ -109,7 +109,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="w-full lg:h-screen">
+    <div id="contact" className="w-full sm:py-20 lg:h-screen">
       <ToastContainer autoClose={10000} />
       <div className="m-auto w-full max-w-[1240px] px-2 py-16">
         <p className="text-xl uppercase tracking-widest text-[#602aaa]">
