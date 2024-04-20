@@ -9,7 +9,7 @@ const Projects = () => {
         <p className="text-xl tracking-widest uppercase text-[#602aaa]">
           Projects
         </p>
-        <h2 className="py-4">What I've built</h2>
+        <h2 className="py-4">What I&apos;ve built</h2>
 
         <section>
           <div className="flex flex-col items-center">
