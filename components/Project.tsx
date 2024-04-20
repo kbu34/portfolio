@@ -25,7 +25,7 @@ const Project = ({ title, description, tags, imageUrl }: ProjectProps) => {
     >
       <section
         ref={ref}
-        className="relative max-h-[22rem] max-w-[26rem] overflow-hidden rounded-lg border border-black/5 shadow-lg shadow-gray-400 transition hover:bg-gray-200 sm:h-[20rem] sm:max-w-[45rem] sm:pr-8 sm:group-even:pl-8"
+        className="relative max-h-[21.5rem] overflow-hidden rounded-lg border border-black/5 shadow-lg shadow-gray-400 transition hover:bg-gray-200 sm:h-[20rem] sm:max-w-[45rem] sm:pr-8 sm:group-even:pl-8"
       >
         <div className="flex h-full flex-col px-5 pb-3 sm:pb-7 sm:pl-10 sm:pt-5 sm:group-odd:mr-[19rem] sm:group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
@@ -43,7 +43,7 @@ const Project = ({ title, description, tags, imageUrl }: ProjectProps) => {
         </div>
 
         <Image
-          className="top-30 rounded-t-lg shadow-2xl transition group-hover:-translate-x-3 group-hover:-translate-y-3 group-hover:-rotate-2 group-hover:scale-[1.04] sm:absolute sm:-right-40 sm:top-8 sm:w-[28.25rem] sm:group-even:-left-40 sm:group-even:right-[initial] sm:group-even:group-hover:translate-x-3 sm:group-even:group-hover:translate-y-3 sm:group-even:group-hover:rotate-2"
+          className="top-30 rounded-t-lg shadow-2xl sm:absolute sm:-right-40 sm:top-8 sm:w-[28.25rem] sm:transition sm:group-even:-left-40 sm:group-even:right-[initial] sm:group-hover:-translate-x-3 sm:group-hover:-translate-y-3 sm:group-hover:-rotate-2 sm:group-hover:scale-[1.04] sm:group-even:group-hover:translate-x-3 sm:group-even:group-hover:translate-y-3 sm:group-even:group-hover:rotate-2"
           src={imageUrl}
           alt="Project I worked on."
           quality={95}
