@@ -10,7 +10,7 @@ function Skills() {
         </p>
         <h2>What I can do</h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in sm:hover:scale-105">
             <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
@@ -25,7 +25,7 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in sm:hover:scale-105">
             <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
@@ -40,7 +40,7 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in sm:hover:scale-105">
             <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
@@ -55,7 +55,7 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in sm:hover:scale-105">
             <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
@@ -70,7 +70,7 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in sm:hover:scale-105">
             <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
@@ -85,7 +85,7 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in sm:hover:scale-105">
             <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
@@ -100,7 +100,7 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in sm:hover:scale-105">
             <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
@@ -115,7 +115,7 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in sm:hover:scale-105">
             <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
@@ -130,7 +130,7 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in sm:hover:scale-105">
             <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
@@ -145,7 +145,7 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in sm:hover:scale-105">
             <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
@@ -160,7 +160,7 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in sm:hover:scale-105">
             <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
