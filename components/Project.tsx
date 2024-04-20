@@ -21,19 +21,19 @@ const Project = ({ title, description, tags, imageUrl }: ProjectProps) => {
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      className="mb-5 sm:mb-8 last:mb-0 group"
+      className="group mb-5 last:mb-0 sm:mb-8"
     >
       <section
         ref={ref}
-        className="shadow-lg shadow-gray-400 max-w-[26rem] sm:max-w-[45rem] border border-black/5 overflow-hidden sm:pr-8 sm:h-[20rem] max-h-[30rem] relative hover:bg-gray-200 transition sm:group-even:pl-8 rounded-lg"
+        className="relative max-h-[30rem] max-w-[26rem] overflow-hidden rounded-lg border border-black/5 shadow-lg shadow-gray-400 transition hover:bg-gray-200 sm:h-[20rem] sm:max-w-[45rem] sm:pr-8 sm:group-even:pl-8"
       >
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pt-5 flex flex-col h-full sm:group-even:ml-[18rem] sm:group-odd:mr-[19rem]">
+        <div className="flex h-full flex-col px-5 pb-7 pt-4 sm:pl-10 sm:pt-5 sm:group-odd:mr-[19rem] sm:group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className="mt-2 leading-relaxed text-gray-700">{description}</p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
+          <ul className="mt-4 flex flex-wrap gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full"
+                className="rounded-full bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white"
                 key={index}
               >
                 {tag}
@@ -43,7 +43,7 @@ const Project = ({ title, description, tags, imageUrl }: ProjectProps) => {
         </div>
 
         <Image
-          className="sm:absolute top-30 sm:top-8 sm:-right-40 sm:w-[28.25rem] rounded-t-lg shadow-2xl sm:group-even:right-[initial] sm:group-even:-left-40 group-hover:-translate-x-3 group-hover:-translate-y-3 group-hover:-rotate-2 group-hover:scale-[1.04] sm:group-even:group-hover:translate-x-3 sm:group-even:group-hover:translate-y-3 sm:group-even:group-hover:rotate-2 transition"
+          className="top-30 rounded-t-lg shadow-2xl transition group-hover:-translate-x-3 group-hover:-translate-y-3 group-hover:-rotate-2 group-hover:scale-[1.04] sm:absolute sm:-right-40 sm:top-8 sm:w-[28.25rem] sm:group-even:-left-40 sm:group-even:right-[initial] sm:group-even:group-hover:translate-x-3 sm:group-even:group-hover:translate-y-3 sm:group-even:group-hover:rotate-2"
           src={imageUrl}
           alt="Project I worked on."
           quality={95}

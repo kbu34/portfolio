@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Image from "../node_modules/next/image";
 import Link from "../node_modules/next/link";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
@@ -29,11 +28,11 @@ const Navbar = () => {
     <div
       className={
         shadow
-          ? "fixed w-full h-20 shadow-xl z-[100]"
-          : "fixed w-full h-20 z-[100]"
+          ? "fixed z-[100] h-20 w-full shadow-xl"
+          : "fixed z-[100] h-20 w-full"
       }
     >
-      <div className="flex justify-end items-center w-full h-full px-2 2xl:px-16">
+      <div className="flex h-full w-full items-center justify-end px-2 2xl:px-16">
         {/* <Image src='/../public/assets/transparent.png' alt='/' width='125' height='50'/> */}
         <div>
           <ul className="hidden md:flex">
@@ -65,28 +64,28 @@ const Navbar = () => {
 
       <div
         className={
-          nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/75" : ""
+          nav ? "fixed left-0 top-0 h-screen w-full bg-black/75 md:hidden" : ""
         }
       >
         <div
           className={
             nav
-              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
-              : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+              ? "fixed left-0 top-0 h-screen w-[75%] bg-[#ecf0f3] p-10 duration-500 ease-in sm:w-[60%] md:w-[45%]"
+              : "fixed left-[-100%] top-0 p-10 duration-500 ease-in"
           }
         >
           <div className="flex w-full items-center justify-end">
             <div
               onClick={handleNav}
-              className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer w-10"
+              className="w-10 cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400"
             >
               <AiOutlineClose />
             </div>
           </div>
-          <div className="border-b border-gray-300 my-8">
-            <p className="w-[85%] md:w-[90%] py-4">Welcome to my website!</p>
+          <div className="my-8 border-b border-gray-300">
+            <p className="w-[85%] py-4 md:w-[90%]">Welcome to my website!</p>
           </div>
-          <div className="py-4 flex flex-col">
+          <div className="flex flex-col py-4">
             <ul className="uppercase">
               <Link href="/home">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
@@ -118,26 +117,26 @@ const Navbar = () => {
               <p className="uppercase tracking-widest text-[#561653]">
                 Connect
               </p>
-              <div className="flex item-center justify-between my-4 w-full sm:w-[80%]">
+              <div className="item-center my-4 flex w-full justify-between sm:w-[80%]">
                 <Link
                   href={"https://www.linkedin.com/in/phillip-kim-1001731bb/"}
                 >
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <div className="cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-105">
                     <FaLinkedinIn />
                   </div>
                 </Link>
                 <Link href={"https://github.com/kbu34/"}>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <div className="cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-105">
                     <FaGithub />
                   </div>
                 </Link>
                 <Link href={"mailto:phillipkim156@gmail.com"}>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <div className="cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-105">
                     <AiOutlineMail />
                   </div>
                 </Link>
                 <Link href={"/#about"}>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <div className="cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-105">
                     <BsPersonLinesFill />
                   </div>
                 </Link>

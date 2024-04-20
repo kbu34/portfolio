@@ -6,10 +6,10 @@ import Link from "../node_modules/next/link";
 
 const Main = () => {
   return (
-    <div id="main" className="w-full h-screen text-center">
-      <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
+    <div id="main" className="h-screen w-full text-center">
+      <div className="mx-auto flex h-full w-full max-w-[1240px] items-center justify-center p-2">
         <div>
-          <p className="uppercase text-sm tracking-widest text-gray-600">
+          <p className="text-sm uppercase tracking-widest text-gray-600">
             Welcome to my website!
           </p>
           <h1 className="py-4 text-gray-700">
@@ -18,7 +18,7 @@ const Main = () => {
           <h1 className="py-4 text-gray-700">
             I&apos;m a full stack software engineer!
           </h1>
-          <p className="py-4 text-gray-600 max-w-[70%] m-auto">
+          <p className="m-auto max-w-[70%] py-4 text-gray-600">
             I&apos;m a full stack developer currently living in Christchurch,
             New Zealand. Since the day I first jumped into programming, my
             passion for software development hasn&apos;t changed. I love all
@@ -27,24 +27,24 @@ const Main = () => {
             working with some amazing people in the tech industry so far and
             would love to do it again.
           </p>
-          <div className="flex  items-center justify-between  max-w-[330px] m-auto py-4">
+          <div className="m-auto  flex max-w-[330px]  items-center justify-between py-4">
             <Link href={"https://www.linkedin.com/in/phillip-kim-1001731bb/"}>
-              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <div className="cursor-pointer rounded-full p-6 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110">
                 <FaLinkedinIn />
               </div>
             </Link>
             <Link href={"https://github.com/kbu34/"}>
-              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <div className="cursor-pointer rounded-full p-6 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110">
                 <FaGithub />
               </div>
             </Link>
             <Link href={"mailto:phillipkim156@gmail.com"}>
-              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <div className="cursor-pointer rounded-full p-6 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110">
                 <AiOutlineMail />
               </div>
             </Link>
             <Link href={"/#about"}>
-              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <div className="cursor-pointer rounded-full p-6 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110">
                 <BsPersonLinesFill />
               </div>
             </Link>

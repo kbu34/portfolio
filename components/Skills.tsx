@@ -3,15 +3,15 @@ import Image from "../node_modules/next/image";
 
 function Skills() {
   return (
-    <div id="skills" className="w-full lg:h-screen p-2">
-      <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-        <p className="text-xl tracking-widest uppercase text-[#602aaa]">
+    <div id="skills" className="w-full p-2 lg:h-screen">
+      <div className="mx-auto flex h-full max-w-[1240px] flex-col justify-center">
+        <p className="text-xl uppercase tracking-widest text-[#602aaa]">
           Skills
         </p>
         <h2>What I can do</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+            <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
                   src={"/assets/html5.png"}
@@ -25,8 +25,8 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+            <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
                   src={"/assets/CSS.png"}
@@ -40,8 +40,8 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+            <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
                   src={"/assets/typescript.png"}
@@ -55,8 +55,8 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+            <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
                   src={"/assets/Nodejs.png"}
@@ -70,8 +70,8 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+            <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
                   src={"/assets/angular.png"}
@@ -85,8 +85,8 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+            <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
                   src={"/assets/nextjs.png"}
@@ -100,8 +100,8 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+            <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
                   src={"/assets/React.png"}
@@ -115,8 +115,8 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+            <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
                   src={"/assets/azuredevops.png"}
@@ -130,8 +130,8 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+            <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
                   src={"/assets/Python.png"}
@@ -145,8 +145,8 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+            <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
                   src={"/assets/golang.png"}
@@ -160,8 +160,8 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+          <div className="rounded-xl p-6 shadow-xl duration-300 ease-in hover:scale-105">
+            <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
                 <Image
                   src={"/assets/swift.png"}
