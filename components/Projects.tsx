@@ -1,17 +1,25 @@
+import { projectsData } from "@/lib/data";
+import React from "react";
+import Project from "./Project";
+
 const Projects = () => {
   return (
     <div id="projects" className="w-full">
-      <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
+      <div className="max-w-[1240px] mx-auto h-full">
         <p className="text-xl tracking-widest uppercase text-[#602aaa]">
           Projects
         </p>
         <h2 className="py-4">What I've built</h2>
 
-        <div className="grid lg:grid-cols-5 gap-8">
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
-            <div className="lg:p-4 h-full"></div>
+        <section>
+          <div className="flex flex-col items-center">
+            {projectsData.map((project, index) => (
+              <React.Fragment key={index}>
+                <Project {...project} />
+              </React.Fragment>
+            ))}
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );
