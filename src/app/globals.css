@@ -8,26 +8,28 @@ html {
 
 @layer base {
   body {
-    @apply bg-[#ecf0ec] text-[#1f2937] tracking-wide
+    @apply bg-[#ecf0ec] tracking-wide text-[#1f2937];
   }
 
-  h1, h2, h3 {
-    @apply font-bold
+  h1,
+  h2,
+  h3 {
+    @apply font-bold;
   }
 
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl
+    @apply text-4xl sm:text-5xl md:text-6xl;
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl
+    @apply text-3xl sm:text-4xl;
   }
 
   li {
-    @apply cursor-pointer
+    @apply cursor-pointer;
   }
 
   button {
-    @apply shadow-xl shadow-gray-300 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white
+    @apply rounded-xl bg-gradient-to-r from-[#5651e5] to-[#709dff] uppercase text-white shadow-xl shadow-gray-300;
   }
 }
