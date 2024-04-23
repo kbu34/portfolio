@@ -49,7 +49,7 @@ const TimelineElements = ({ item }: any) => {
 
 const Experience = () => {
   return (
-    <div id="projects" className="w-full px-2 py-16">
+    <div id="experience" className="w-full px-2 py-16">
       <div className="mx-auto h-full max-w-[1240px]">
         <p className="text-xl uppercase tracking-widest text-[#602aaa]">
           Experience
