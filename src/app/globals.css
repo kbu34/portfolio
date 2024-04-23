@@ -7,6 +7,10 @@ html {
 }
 
 @layer base {
+  html {
+    --line-color: #b2b2b2;
+  }
+
   body {
     @apply bg-[#ecf0ec] tracking-wide text-[#1f2937];
   }
