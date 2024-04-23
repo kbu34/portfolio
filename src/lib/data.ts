@@ -43,8 +43,26 @@ export const experienceData = [
     title: "Bachelor of Engineering with Honours",
     location: "Christchurch, Canterbury, NZ",
     organisation: "University of Canterbury",
-    description: "",
+    description: "I graduated from university after studying for 4.5 years.",
     icon: React.createElement(LuGraduationCap),
     date: "2022",
+  },
+  {
+    title: "Intern Software Engineer",
+    location: "Christchurch, Canterbury, NZ",
+    organisation: "Seequent",
+    description:
+      "This internship project involved iOS development using Swift. Metal framework was also used for 3D graphics developement.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2021 ~ 2022",
+  },
+  {
+    title: "Software Engineering Intern",
+    location: "Hamilton, Waikato, NZ",
+    organisation: "Endace Technology Ltd",
+    description:
+      "My first internship project! I developed a custom Terraform provider from scratch using GoLang by myself.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2020 ~ 2021",
   },
 ] as const;
