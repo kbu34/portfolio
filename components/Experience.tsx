@@ -11,7 +11,9 @@ import { useInView } from "react-intersection-observer";
 import { CiStar } from "react-icons/ci";
 
 const TimelineElements = ({ item }: any) => {
-  const { ref, inView } = useInView({});
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+  });
 
   return (
     <div ref={ref} className="vertical-timeline-element">
