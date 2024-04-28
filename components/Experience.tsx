@@ -12,7 +12,7 @@ import { CiStar } from "react-icons/ci";
 
 const TimelineElements = ({ item }: any) => {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   return (
