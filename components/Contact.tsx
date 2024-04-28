@@ -8,6 +8,60 @@ import { LuChevronsUp } from "react-icons/lu";
 import Link from "../node_modules/next/link";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { motion } from "framer-motion";
+
+const titleAnimationVariants = {
+  initial: {
+    opacity: 0,
+    x: -100,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+  },
+};
+
+const cardAnimationVariants = {
+  initial: {
+    opacity: 0,
+    x: -100,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.1,
+    },
+  },
+};
+
+const formAnimationVariants = {
+  initial: {
+    opacity: 0,
+    x: 100,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.1,
+    },
+  },
+};
+
+const upButtonAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.1,
+    },
+  },
+};
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -112,12 +166,25 @@ const Contact = () => {
     <div id="contact" className="w-full sm:py-20 lg:h-screen">
       <ToastContainer autoClose={10000} />
       <div className="m-auto w-full max-w-[1240px] px-2 py-16">
-        <p className="text-xl uppercase tracking-widest text-[#602aaa]">
-          Contact
-        </p>
-        <h2 className="py-4">Get in Touch</h2>
+        <motion.div
+          variants={titleAnimationVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          <p className="text-xl uppercase tracking-widest text-[#602aaa]">
+            Contact
+          </p>
+          <h2 className="py-4">Get in Touch</h2>
+        </motion.div>
         <div className="grid gap-8 lg:grid-cols-5">
-          <div className="col-span-3 h-full w-full rounded-xl p-4 shadow-xl shadow-gray-400 lg:col-span-2">
+          <motion.div
+            className="col-span-3 h-full w-full rounded-xl p-4 shadow-xl shadow-gray-400 lg:col-span-2"
+            variants={cardAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+          >
             <div className="h-full lg:p-4">
               <div>
                 <img
@@ -163,8 +230,14 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="col-span-3 h-auto w-full rounded-xl shadow-xl shadow-gray-400 lg:p-4">
+          </motion.div>
+          <motion.div
+            className="col-span-3 h-auto w-full rounded-xl shadow-xl shadow-gray-400 lg:p-4"
+            variants={formAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+          >
             <div className="p-4">
               <form>
                 <div className="grid w-full gap-4 py-2 md:grid-cols-2">
@@ -277,15 +350,22 @@ const Contact = () => {
                 </button>
               </form>
             </div>
+          </motion.div>
+        </div>
+        <motion.div
+          variants={upButtonAnimationVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          <div className="flex justify-center py-12">
+            <Link href="/#home">
+              <div className="cursor-pointer rounded-full p-4 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110">
+                <LuChevronsUp className="text-[#602aaa]" size={30} />
+              </div>
+            </Link>
           </div>
-        </div>
-        <div className="flex justify-center py-12">
-          <Link href="/#home">
-            <div className="cursor-pointer rounded-full p-4 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110">
-              <LuChevronsUp className="text-[#602aaa]" size={30} />
-            </div>
-          </Link>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
