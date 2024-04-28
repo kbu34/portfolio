@@ -38,11 +38,11 @@ const cardAnimationVariants = {
 const formAnimationVariants = {
   initial: {
     opacity: 0,
-    x: 100,
+    y: 100,
   },
   animate: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
       delay: 0.1,
     },
