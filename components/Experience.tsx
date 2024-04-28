@@ -9,6 +9,18 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { useInView } from "react-intersection-observer";
 import { CiStar } from "react-icons/ci";
+import { motion } from "framer-motion";
+
+const titleAnimationVariants = {
+  initial: {
+    opacity: 0,
+    x: -100,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+  },
+};
 
 const TimelineElements = ({ item }: any) => {
   const { ref, inView } = useInView({
@@ -51,10 +63,17 @@ const Experience = () => {
   return (
     <div id="experience" className="w-full px-2 py-16">
       <div className="mx-auto h-full max-w-[1240px]">
-        <p className="text-xl uppercase tracking-widest text-[#602aaa]">
-          Experience
-        </p>
-        <h2 className="py-4">What I&apos;ve done</h2>
+        <motion.div
+          variants={titleAnimationVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          <p className="text-xl uppercase tracking-widest text-[#602aaa]">
+            Experience
+          </p>
+          <h2 className="py-4">What I&apos;ve done</h2>
+        </motion.div>
         <VerticalTimeline lineColor="">
           {experienceData.map((item, index) => {
             return <TimelineElements key={index} item={item} />;
