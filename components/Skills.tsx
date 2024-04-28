@@ -1,15 +1,59 @@
+"use client";
+
 import React from "react";
 import Image from "../node_modules/next/image";
+import { motion } from "framer-motion";
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.15,
+    },
+  },
+};
+
+const titleAnimationVariants = {
+  initial: {
+    opacity: 0,
+    x: -100,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.1,
+    },
+  },
+};
 
 function Skills() {
   return (
     <div id="skills" className="w-full p-2 lg:h-screen">
       <div className="mx-auto flex h-full max-w-[1240px] flex-col justify-center">
-        <p className="text-xl uppercase tracking-widest text-[#602aaa]">
-          Skills
-        </p>
-        <h2>What I can do</h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <motion.div
+          variants={titleAnimationVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          <p className="text-xl uppercase tracking-widest text-[#602aaa]">
+            Skills
+          </p>
+          <h2>What I can do</h2>
+        </motion.div>
+        <motion.div
+          className="grid gap-8 md:grid-cols-2 lg:grid-cols-4"
+          variants={fadeInAnimationVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
           <div className="rounded-xl p-6 shadow-xl duration-300 ease-in sm:hover:scale-105">
             <div className="grid grid-cols-2 items-center justify-center gap-4">
               <div className="m-auto">
@@ -175,7 +219,7 @@ function Skills() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
