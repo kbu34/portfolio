@@ -44,8 +44,8 @@ const imageAnimationVariants = {
 
 const About = () => {
   return (
-    <div id="about" className="flex w-full items-center p-2 py-16 md:h-screen">
-      <div className="m-auto max-w-[1240px] grid-cols-3 gap-8 md:grid">
+    <div id="about" className="flex w-full items-center p-2 py-16">
+      <div className="m-auto max-w-[1240px] grid-cols-3 gap-8 sm:grid">
         <div className="col-span-2">
           <motion.div
             variants={titleAnimationVariants}
