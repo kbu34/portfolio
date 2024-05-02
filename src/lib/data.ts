@@ -4,6 +4,9 @@ import image3 from "public/assets/wander.png";
 import React from "react";
 import { LuGraduationCap } from "react-icons/lu";
 import { CgWorkAlt } from "react-icons/cg";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
+import { BsPersonLinesFill } from "react-icons/bs";
 
 export const projectsData = [
   {
@@ -64,5 +67,24 @@ export const experienceData = [
       "My first internship project! I developed a custom Terraform provider from scratch using GoLang by myself.",
     icon: React.createElement(CgWorkAlt),
     date: "2020 ~ 2021",
+  },
+] as const;
+
+export const linksData = [
+  {
+    link: "https://www.linkedin.com/in/phillip-kim-1001731bb/",
+    symbol: React.createElement(FaLinkedinIn),
+  },
+  {
+    link: "https://github.com/kbu34/",
+    symbol: React.createElement(FaGithub),
+  },
+  {
+    link: "mailto:phillipkim156@gmail.com",
+    symbol: React.createElement(AiOutlineMail),
+  },
+  {
+    link: "/#about",
+    symbol: React.createElement(BsPersonLinesFill),
   },
 ] as const;
