@@ -66,7 +66,7 @@ const Main = () => {
           <motion.div
             variants={welcomeAnimationVariants}
             initial="initial"
-            whileInView="animate"
+            animate="animate"
             viewport={{ once: true }}
           >
             <p className="text-sm uppercase tracking-widest text-gray-600">
@@ -76,7 +76,7 @@ const Main = () => {
           <motion.div
             variants={titleAnimationVariants}
             initial="initial"
-            whileInView="animate"
+            animate="animate"
             viewport={{ once: true }}
           >
             <h1 className="py-4 text-gray-700">
@@ -89,7 +89,7 @@ const Main = () => {
           <motion.div
             variants={paragraphAnimationVariants}
             initial="initial"
-            whileInView="animate"
+            animate="animate"
             viewport={{ once: true }}
           >
             <p className="m-auto max-w-[70%] py-4 text-gray-600">
@@ -108,7 +108,7 @@ const Main = () => {
                 key={index}
                 variants={linkAnimationVariants}
                 initial="initial"
-                whileInView="animate"
+                animate="animate"
                 viewport={{ once: true }}
                 custom={index}
               >
