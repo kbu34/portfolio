@@ -1,6 +1,17 @@
 import image1 from "public/assets/portfolio.png";
 import image2 from "public/assets/bloodstain.png";
 import image3 from "public/assets/wander.png";
+import htmlImage from "public/assets/html5.png";
+import cssImage from "public/assets/CSS.png";
+import tsImage from "public/assets/typescript.png";
+import nodeImage from "public/assets/Nodejs.png";
+import angularImage from "public/assets/angular.png";
+import nextImage from "public/assets/nextjs.png";
+import reactImage from "public/assets/React.png";
+import azureImage from "public/assets/azuredevops.png";
+import pythonImage from "public/assets/Python.png";
+import golangImage from "public/assets/golang.png";
+import swiftImage from "public/assets/swift.png";
 import React from "react";
 import { LuGraduationCap } from "react-icons/lu";
 import { CgWorkAlt } from "react-icons/cg";
@@ -86,5 +97,52 @@ export const linksData = [
   {
     link: "/#about",
     symbol: React.createElement(BsPersonLinesFill),
+  },
+] as const;
+
+export const skillsData = [
+  {
+    name: "HTML",
+    imageUrl: htmlImage,
+  },
+  {
+    name: "CSS",
+    imageUrl: cssImage,
+  },
+  {
+    name: "TypeScript",
+    imageUrl: tsImage,
+  },
+  {
+    name: "Node.js",
+    imageUrl: nodeImage,
+  },
+  {
+    name: "Angular",
+    imageUrl: angularImage,
+  },
+  {
+    name: "Next.js",
+    imageUrl: nextImage,
+  },
+  {
+    name: "React",
+    imageUrl: reactImage,
+  },
+  {
+    name: "Azure DevOps",
+    imageUrl: azureImage,
+  },
+  {
+    name: "Python",
+    imageUrl: pythonImage,
+  },
+  {
+    name: "GoLang",
+    imageUrl: golangImage,
+  },
+  {
+    name: "Swift",
+    imageUrl: swiftImage,
   },
 ] as const;
