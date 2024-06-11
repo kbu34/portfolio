@@ -4,6 +4,7 @@ import Link from "../node_modules/next/link";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsPersonLinesFill } from "react-icons/bs";
+import { linksData } from "@/lib/data";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -127,29 +128,20 @@ const Navbar = () => {
               <p className="uppercase tracking-widest text-[#561653]">
                 Connect
               </p>
-              <div className="item-center my-4 flex w-full justify-between sm:w-[80%]">
-                <Link
-                  href={"https://www.linkedin.com/in/phillip-kim-1001731bb/"}
-                >
-                  <div className="cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-105">
-                    <FaLinkedinIn />
-                  </div>
-                </Link>
-                <Link href={"https://github.com/kbu34/"}>
-                  <div className="cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-105">
-                    <FaGithub />
-                  </div>
-                </Link>
-                <Link href={"mailto:phillipkim156@gmail.com"}>
-                  <div className="cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-105">
-                    <AiOutlineMail />
-                  </div>
-                </Link>
-                <Link href={"/#about"}>
-                  <div className="cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-105">
-                    <BsPersonLinesFill />
-                  </div>
-                </Link>
+              <div>
+                <ul className="m-auto  flex max-w-[330px]  items-center justify-between py-4">
+                  {linksData.map((data, _) => (
+                    <li key={""}>
+                      <div className="">
+                        <Link href={data.link}>
+                          <div className="cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-105">
+                            {data.symbol}
+                          </div>
+                        </Link>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
