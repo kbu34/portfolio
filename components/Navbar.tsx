@@ -2,8 +2,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "../node_modules/next/link";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
-import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import { BsPersonLinesFill } from "react-icons/bs";
 import { linksData } from "@/lib/data";
 
 const Navbar = () => {
@@ -34,30 +32,35 @@ const Navbar = () => {
       }
     >
       <div className="flex h-full w-full items-center justify-end px-2 2xl:px-16">
-        {/* <Image src='/../public/assets/transparent.png' alt='/' width='125' height='50'/> */}
         <div>
           <ul className="hidden md:flex">
             <Link href="/#home">
-              <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
+              <li className="ml-5 rounded-xl px-3 py-2 text-sm uppercase transition duration-500 hover:bg-[#a7a5d4]">
+                Home
+              </li>
             </Link>
             <Link href="/#about">
-              <li className="ml-10 text-sm uppercase hover:border-b">About</li>
+              <li className="ml-5 rounded-xl px-3 py-2 text-sm uppercase transition duration-500 hover:bg-[#a7a5d4]">
+                About
+              </li>
             </Link>
             <Link href="/#experience">
-              <li className="ml-10 text-sm uppercase hover:border-b">
+              <li className="ml-5 rounded-xl px-3 py-2 text-sm uppercase transition duration-500 hover:bg-[#a7a5d4]">
                 Experience
               </li>
             </Link>
             <Link href="/#skills">
-              <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
+              <li className="ml-5 rounded-xl px-3 py-2 text-sm uppercase transition duration-500 hover:bg-[#a7a5d4]">
+                Skills
+              </li>
             </Link>
             <Link href="/#projects">
-              <li className="ml-10 text-sm uppercase hover:border-b">
+              <li className="ml-5 rounded-xl px-3 py-2 text-sm uppercase transition duration-500 hover:bg-[#a7a5d4]">
                 Projects
               </li>
             </Link>
             <Link href="/#contact">
-              <li className="ml-10 text-sm uppercase hover:border-b">
+              <li className="ml-5 rounded-xl px-3 py-2 text-sm uppercase transition duration-500 hover:bg-[#a7a5d4]">
                 Contact
               </li>
             </Link>
