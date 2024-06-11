@@ -129,7 +129,7 @@ const Navbar = () => {
                 Connect
               </p>
               <div>
-                <ul className="m-auto  flex max-w-[330px]  items-center justify-between py-4">
+                <ul className="item-center my-4 flex w-full justify-between sm:w-[80%]">
                   {linksData.map((data, _) => (
                     <li key={""}>
                       <div className="">
