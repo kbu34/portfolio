@@ -9,6 +9,7 @@ import Link from "../node_modules/next/link";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
+import { linksData } from "@/lib/data";
 
 const titleAnimationVariants = {
   initial: {
@@ -204,29 +205,20 @@ const Contact = () => {
               </div>
               <div>
                 <p className="pt-8 uppercase">Connect with me</p>
-                <div className="flex items-center justify-between py-4">
-                  <Link
-                    href={"https://www.linkedin.com/in/phillip-kim-1001731bb/"}
-                  >
-                    <div className="cursor-pointer rounded-full p-6 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110">
-                      <FaLinkedinIn />
-                    </div>
-                  </Link>
-                  <Link href={"https://github.com/kbu34/"}>
-                    <div className="cursor-pointer rounded-full p-6 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110">
-                      <FaGithub />
-                    </div>
-                  </Link>
-                  <Link href={"mailto:phillipkim156@gmail.com"}>
-                    <div className="cursor-pointer rounded-full p-6 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110">
-                      <AiOutlineMail />
-                    </div>
-                  </Link>
-                  <Link href={"/#about"}>
-                    <div className="cursor-pointer rounded-full p-6 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110">
-                      <BsPersonLinesFill />
-                    </div>
-                  </Link>
+                <div>
+                  <ul className="flex items-center justify-between py-4">
+                    {linksData.map((data, _) => (
+                      <li key={""}>
+                        <div className="">
+                          <Link href={data.link}>
+                            <div className="cursor-pointer rounded-full p-6 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110">
+                              {data.symbol}
+                            </div>
+                          </Link>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
