@@ -12,13 +12,13 @@ html {
   }
 
   body {
-    @apply bg-[#ecf0ec] tracking-wide text-[#1f2937];
+    @apply bg-[#ecf0ec] tracking-wide text-[#1f2937] dark:bg-gray-800 dark:text-[#ffffff];
   }
 
   h1,
   h2,
   h3 {
-    @apply font-bold;
+    @apply font-bold dark:text-[#ffffff];
   }
 
   h1 {
@@ -35,5 +35,9 @@ html {
 
   button {
     @apply rounded-xl bg-gradient-to-r from-[#5651e5] to-[#709dff] uppercase text-white shadow-xl shadow-gray-300;
+  }
+
+  p {
+    @apply dark:text-[#ffffff];
   }
 }

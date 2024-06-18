@@ -173,7 +173,7 @@ const Contact = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <p className="text-xl uppercase tracking-widest text-[#602aaa]">
+          <p className="text-xl uppercase tracking-widest text-[#602aaa] dark:text-[#9c8eaf]">
             Contact
           </p>
           <h2 className="py-4">Get in Touch</h2>
@@ -208,8 +208,8 @@ const Contact = () => {
                 <div>
                   <ul className="flex items-center justify-between py-4">
                     {linksData.map((data, _) => (
-                      <li key={""}>
-                        <div className="">
+                      <li key={data.link}>
+                        <div>
                           <Link href={data.link}>
                             <div className="cursor-pointer rounded-full p-6 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110">
                               {data.symbol}

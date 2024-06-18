@@ -43,7 +43,7 @@ function Skills() {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <p className="text-xl uppercase tracking-widest text-[#602aaa]">
+          <p className="text-xl uppercase tracking-widest text-[#602aaa] dark:text-[#9c8eaf]">
             Skills
           </p>
           <h2>What I can do</h2>
@@ -52,14 +52,14 @@ function Skills() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {skillsData.map((data, index) => (
             <motion.div
-              key={index}
+              key={data.name}
               variants={fadeInAnimationVariants}
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
               custom={index}
             >
-              <div className="rounded-xl p-6 shadow-xl duration-300 ease-in sm:hover:scale-105">
+              <div className="rounded-xl p-6 shadow-xl duration-300 ease-in dark:shadow-white sm:hover:scale-105">
                 <div className="grid grid-cols-2 items-center justify-center gap-4">
                   <div className="m-auto">
                     <Image

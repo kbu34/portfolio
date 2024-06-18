@@ -80,7 +80,11 @@ const Main = () => {
             viewport={{ once: true }}
           >
             <h1 className="py-4 text-gray-700">
-              Hello, I&apos;m <span className="text-[#602aaa]">Phillip</span>!
+              Hello, I&apos;m{" "}
+              <span className="text-[#602aaa] dark:text-[#947cb5]">
+                Phillip
+              </span>
+              !
             </h1>
             <h1 className="py-4 text-gray-700">
               I&apos;m a full stack software engineer!
@@ -105,7 +109,7 @@ const Main = () => {
           <ul className="m-auto  flex max-w-[330px]  items-center justify-between py-4">
             {linksData.map((data, index) => (
               <motion.li
-                key={index}
+                key={data.link}
                 variants={linkAnimationVariants}
                 initial="initial"
                 animate="animate"

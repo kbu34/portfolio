@@ -25,16 +25,16 @@ const Project = ({ title, description, tags, imageUrl }: ProjectProps) => {
     >
       <section
         ref={ref}
-        className="relative max-h-[21.5rem] overflow-hidden rounded-lg border border-black/5 shadow-lg shadow-gray-400 transition sm:h-[20rem] sm:max-w-[45rem] sm:pr-8 sm:hover:bg-gray-200 sm:group-even:pl-8"
+        className="relative max-h-[21.5rem] overflow-hidden rounded-lg border border-black/5 shadow-lg shadow-gray-400 transition sm:h-[20rem] sm:max-w-[45rem] sm:pr-8 sm:hover:bg-gray-200 sm:group-even:pl-8 dark:sm:hover:bg-gray-600"
       >
         <div className="flex h-full flex-col px-5 pb-3 sm:pb-7 sm:pl-10 sm:pt-5 sm:group-odd:mr-[19rem] sm:group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className="mt-2 leading-relaxed text-gray-700">{description}</p>
           <ul className="mt-4 flex flex-wrap gap-2 sm:mt-auto">
-            {tags.map((tag, index) => (
+            {tags.map((tag, _) => (
               <li
                 className="rounded-full bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white"
-                key={index}
+                key={tag}
               >
                 {tag}
               </li>

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "../node_modules/next/link";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
 import { linksData } from "@/lib/data";
+import ThemeSwitch from "./ThemeSwitch";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -64,6 +65,9 @@ const Navbar = () => {
                 Contact
               </li>
             </Link>
+            <div className="ml-5 px-3 py-1">
+              <ThemeSwitch />
+            </div>
           </ul>
           <div onClick={handleNav} className="md:hidden">
             <AiOutlineMenu size={25} />
@@ -79,7 +83,7 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "fixed left-0 top-0 h-screen w-[75%] bg-[#ecf0f3] p-10 duration-500 ease-in sm:w-[60%] md:w-[45%]"
+              ? "fixed left-0 top-0 h-screen w-[75%] bg-[#ecf0f3] p-10 duration-500 ease-in dark:bg-gray-800 sm:w-[60%] md:w-[45%]"
               : "fixed left-[-100%] top-0 p-10 duration-500 ease-in"
           }
         >
@@ -126,15 +130,18 @@ const Navbar = () => {
                   Contact
                 </li>
               </Link>
+              <div className="py-1">
+                <ThemeSwitch />
+              </div>
             </ul>
-            <div className="pt-40">
+            <div className="pt-28">
               <p className="uppercase tracking-widest text-[#561653]">
                 Connect
               </p>
               <div>
                 <ul className="item-center my-4 flex w-full justify-between sm:w-[80%]">
                   {linksData.map((data, _) => (
-                    <li key={""}>
+                    <li key={data.link}>
                       <div className="">
                         <Link href={data.link}>
                           <div className="cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-105">

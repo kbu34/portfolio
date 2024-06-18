@@ -53,7 +53,7 @@ const About = () => {
             whileInView="animate"
             viewport={{ once: true }}
           >
-            <p className="text-xl uppercase tracking-widest text-[#602aaa]">
+            <p className="text-xl uppercase tracking-widest text-[#602aaa] dark:text-[#9c8eaf]">
               About
             </p>
             <h2 className="py-4">Who I am</h2>
