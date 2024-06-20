@@ -57,7 +57,8 @@ export const experienceData = [
     title: "Bachelor of Engineering with Honours",
     location: "Christchurch, Canterbury, NZ",
     organisation: "University of Canterbury",
-    description: "I graduated from university after studying for 4.5 years.",
+    description:
+      "I studied a variety of topics on Computer Science and Software Engineering.",
     icon: React.createElement(LuGraduationCap),
     date: "2022",
   },

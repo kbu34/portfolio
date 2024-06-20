@@ -103,7 +103,7 @@ const Main = () => {
               aspects of computers and software engineering. Whether it&apos;s
               embedded system or cloud computing. I&apos;ve had the privilege of
               working with some amazing people in the tech industry so far and
-              would love to do it again.
+              would love to keep doing it.
             </p>
           </motion.div>
           <ul className="m-auto  flex max-w-[330px]  items-center justify-between py-4">
