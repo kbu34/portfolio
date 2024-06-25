@@ -34,7 +34,7 @@ const Projects = () => {
 
         <section>
           <div className="flex flex-col items-center">
-            {projectsData.map((project, index) => (
+            {projectsData.map((project, _) => (
               <React.Fragment key={project.title}>
                 <Project {...project} />
               </React.Fragment>
