@@ -136,7 +136,7 @@ const Contact = () => {
       message,
     };
 
-    fetch("/api/contact", {
+    const mailPromise = fetch("/api/contact", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -151,16 +151,20 @@ const Contact = () => {
         setEmail("");
         setSubject("");
         setMessage("");
-        toast.success("Message sent successfully! Thank you!", {
-          position: "bottom-right",
-        });
       } else {
         setIsSubmitting(false);
-        toast.error("Something went wrong! Try again later.", {
-          position: "bottom-right",
-        });
       }
     });
+
+    toast.promise(
+      mailPromise,
+      {
+        pending: "Sending mail...",
+        success: "Message sent successfully! Thank you!",
+        error: "Something went wrong! Try again later.",
+      },
+      { position: "bottom-right" },
+    );
   };
 
   return (
