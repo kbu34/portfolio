@@ -9,10 +9,9 @@ I'm also taking feedback through those same channels, looking forward to those e
 
 ## Todo List
 
-- Upgrade Next.js version to 14/15
+- Upgrade Next.js version to 15
 - Update projects section with upcoming projects
 - Redesign abouts section to contain more information
-- Add toast for email sending in progress in contacts section
 
 ## If you want to run this website locally for some reason...
 
