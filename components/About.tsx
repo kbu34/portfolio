@@ -98,11 +98,15 @@ const About = () => {
               skills such as communications and time management.
             </p>
             <p className="py-2 text-gray-600">
+              I currently work at 3Logix as a full stack developer. I was able
+              to pick up the new tech stack pretty quickly thanks to my previous
+              experiences.
+            </p>
+            <p className="py-2 text-gray-600">
               When I&apos;m not working, I like going on walks and tramping. I
               also save the world from bad guys if I feel like it. Or synthesise
               new items in my atelier using alchemy.
             </p>
-            <p className="py-2 italic text-gray-600">More to come...</p>
           </motion.div>
         </div>
         <motion.div

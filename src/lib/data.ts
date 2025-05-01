@@ -45,6 +45,15 @@ export const projectsData = [
 
 export const experienceData = [
   {
+    title: "Full-Stack Developer",
+    location: "Christchurch, Canterbury, NZ",
+    organisation: "3Logix Pty Ltd",
+    description:
+      "I work as a full-stack developer for a React Native mobile application and a Ruby on Rails web application. In this position, I'm responsible for implementing new features and fixing bugs. As well as distributing new versions of the mobile app and importing customer data into the system.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2024 ~ Current",
+  },
+  {
     title: "Software Engineer",
     location: "Christchurch, Canterbury, NZ",
     organisation: "Trimble Navigation NZ Ltd",
@@ -145,5 +154,9 @@ export const skillsData = [
   {
     name: "Swift",
     imageUrl: swiftImage,
+  },
+  {
+    name: "React Native",
+    imageUrl: reactImage,
   },
 ] as const;
